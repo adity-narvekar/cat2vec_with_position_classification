@@ -1,0 +1,8 @@
+archive/
+results/
+figures/
+docs/
+manuscript/
+__pycache__/
+.DS_Store
+*.pyc
