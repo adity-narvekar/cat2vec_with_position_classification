@@ -1,4 +1,4 @@
-# Cat2Vec with Positional Encoding
+# Cat2Vec with Positional Encoding for classfication
 
 ## Description
 
@@ -20,7 +20,6 @@ Experiments are run across three real-world datasets, five encoding pipelines, a
 
 All three datasets contain a mix of binary, nominal, and ordinal categorical features with a binary `target` column.
 
-Dataset documentation is in `docs/dataset_cdc_diabetes_brfss.md` and `docs/dataset_nursery.md`.
 
 ---
 
@@ -32,8 +31,7 @@ Dataset documentation is in `docs/dataset_cdc_diabetes_brfss.md` and `docs/datas
 |---|---|---|
 | `experiment_baseline_and_significance.py` | Cat-in-the-Dat I & II | Runs P0–P4 pipelines across classifiers with repeated splits and significance tests |
 | `experiment_baseline_and_significance_brfss.py` | BRFSS Diabetes | Same experiment harness applied to the BRFSS dataset |
-| `generate_figure1.py` | — | Generates Figure 1 (pipeline diagram) as a PDF via matplotlib |
-| `generate_figure1_sklearn.py` | — | Alternative Figure 1 generator using sklearn-compatible stubs |
+
 
 ### Encoding Pipelines
 
@@ -101,13 +99,7 @@ python3.11 scripts/experiment_baseline_and_significance.py --seeds 5 > results/o
     --seeds 5 > results/experiments_seed5_results.md
 ```
 
-### 4. Generate figures
 
-```bash
-/usr/local/bin/python3.11 scripts/generate_figure1_sklearn.py
-```
-
-Output is written to `figures/`.
 
 ---
 
@@ -139,12 +131,6 @@ Install with:
 cat2vec/
 ├── data/                  # Input datasets
 ├── scripts/               # Experiment and figure generation scripts
-├── results/               # Experiment output (markdown)
-├── figures/               # Generated figures (PDF/PNG/HTML)
-├── manuscript/            # Paper draft
-├── notebooks/             # Exploratory notebooks
-├── docs/                  # Dataset and figure build notes
-├── archive/               # Superseded files
 ├── requirements.txt
 └── README.md
 ```
